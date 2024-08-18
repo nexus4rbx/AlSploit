@@ -177,7 +177,7 @@ task.spawn(function()
 	end
 
 	if not ReadFile then
-		CreateNotification(3, "Unable To Load Settings")
+		CreateNotification(3, "Unable to load Settings")
 	end
 
 	task.spawn(function()
@@ -653,7 +653,7 @@ function AlSploitLibrary:CreateTab(Name)
 
 						Function()
 
-						CreateNotification(3, Name .. " Has Been Toggled " .. (AlSploitSettings[Name].Value == true and "On" or "Off"))
+						CreateNotification(3, Name .. " Has been toggled " .. (AlSploitSettings[Name].Value == true and "On" or "Off"))
 					end
 
 					if CanInputKeybind == true then
@@ -2008,7 +2008,7 @@ task.spawn(function()
 			local Scythe = GetScythe()
 
 			if not Scythe and AlSploitSettings.ScytheDisabler.Value == true and GetMatchState() ~= 0 then
-				CreateNotification(3, "A Scythe Is Required To Use ScytheDisabler")
+				CreateNotification(3, "A scythe is required To Use ScytheDisabler")
 			end
 
 			repeat
@@ -2536,7 +2536,7 @@ end)
 
 task.spawn(function()
 	local Aimbot = CombatTab:CreateToggle({
-		Name = "Aimbot",
+		Name = "ProjectileAura",
 
 		Function = function()    
 			repeat
@@ -2631,7 +2631,7 @@ task.spawn(function()
 	})
 end)
 
---[[task.spawn(function()
+task.spawn(function()
 	local AntiHit = CombatTab:CreateToggle({
 		Name = "AntiHit",
 
@@ -2705,7 +2705,7 @@ end)
 		MaximumValue = 19,
 		DefaultValue = 19
 	})
-end)--]]
+end)
 
 task.spawn(function()
 	local OldSwingSwordAtMouse
@@ -2800,7 +2800,7 @@ end)
 
 task.spawn(function()
 	local KnockbackTp = BlatantTab:CreateToggle({
-		Name = "KnockbackTp",
+		Name = "KnockbackTP",
 
 		Function = function() end,
 
@@ -3210,7 +3210,7 @@ task.spawn(function()
 	local OldDepthOffset = BedwarsControllers.ViewModelController:GetAttribute("ConstantManager_DEPTH_OFFSET")
 
 	local ViewModelChanger = UtilityTab:CreateToggle({
-		Name = "ViewModelChanger",
+		Name = "Nobob",
 
 		Function = function()
 			if AlSploitSettings.ViewModelChanger.Value == true and ViewModel and C1 then
@@ -3230,7 +3230,7 @@ task.spawn(function()
 			end
 		end,
 
-		HoverText = "Allows You To Change Your ViewModel (First Person Camera) 📷"
+		HoverText = "Removes the ugly fucking sword bobbing"
 	})
 
 	ViewModelChanger:CreateSlider({
@@ -3299,7 +3299,7 @@ task.spawn(function()
 	end)
 
 	local HideKillFeed = UtilityTab:CreateToggle({
-		Name = "HideKillFeedGui",
+		Name = "KillfeedHider",
 
 		Function = function()
 			if AlSploitSettings.HideKillFeedGui.Value == true and KillFeedHudGui then
@@ -3514,7 +3514,7 @@ task.spawn(function()
 	BlurEffect.Size = 0
 
 	local MotionBlur = WorldTab:CreateToggle({
-		Name = "MotionBlur",
+		Name = "Motion Blur",
 
 		Function = function()
 			repeat
@@ -4386,16 +4386,16 @@ task.spawn(function()
 
 		Function = function()
 			if AlSploitSettings.AutoInject.Value == true and not QueueOnTeleport then
-				CreateNotification(3, "Your Executor Does Not Support AutoInject")
+				CreateNotification(3, "Your executor Does Not Support AutoInject")
 			end
 		end,
 
-		HoverText = "AutoUnInjects AlSploit 🐁"
+		HoverText = "AutoInjects AlSploit 🐁"
 	})
 
 	LocalPlayer.OnTeleport:Connect(function(TeleportState)
 		if TeleportState == Enum.TeleportState.Started and AlSploitSettings.AutoInject.Value == true and shared.AlSploitUnInjected == false then
-			QueueOnTeleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/AlSploit/AlSploit/main/AlSploit/Bedwars/Loader.lua',true))()")
+			QueueOnTeleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/nexus4rbx/AlSploit/main/AlSploit/Bedwars/Loader.lua',true))()")
 		end
 	end)
 end)
