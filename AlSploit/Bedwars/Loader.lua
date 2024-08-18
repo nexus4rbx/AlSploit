@@ -121,7 +121,7 @@ local function MakeAlSploitLoadingScreen(Time)
 	Discord.Position = UDim2.new(0, 0, 0.890, 0)
 	Discord.Size = UDim2.new(1, 0, 0.097, 0)
 	Discord.Font = Enum.Font.GothamBold
-	Discord.Text = "Discord Username: godclutcher"
+	Discord.Text = "Credits: godclutcher"
 	Discord.TextColor3 = Color3.new(1, 1, 1)
 	Discord.TextScaled = true
 	Discord.TextSize = 16.000
@@ -139,7 +139,7 @@ local function MakeAlSploitLoadingScreen(Time)
 	DiscordServer.Position = UDim2.new(0, 0, 0.822, 0)
 	DiscordServer.Size = UDim2.new(1, 0, 0.0694, 0)
 	DiscordServer.Font = Enum.Font.GothamBold
-	DiscordServer.Text = "Discord Server: discord.gg/JJryxTawZa"
+	DiscordServer.Text = "Discord Server: no"
 	DiscordServer.TextColor3 = Color3.new(1, 1, 1)
 	DiscordServer.TextScaled = true
 	DiscordServer.TextSize = 16.000
@@ -216,7 +216,7 @@ end
 
 task.spawn(function()
 	if not (writefile or makefolder or isfile or isfolder) then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/AlSploit/Bedwars/MainScript.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/nexus4rbx/AlSploit/main/AlSploit/Bedwars/MainScript.lua"))()
 		
 		Loaded = true
 	end
@@ -236,9 +236,9 @@ task.spawn(function()
 		task.wait(2)
 		task.wait(2.6 + (tick() - LoadTick))
 		
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/AlSploit/Bedwars/MainScript.lua"))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/nexus4rbx/AlSploit/main/AlSploit/Bedwars/MainScript.lua"))()
 	end
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AlSploit/AlSploit/main/AlSploit/Bedwars/Executed"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/nexus4rbx/AlSploit/main/AlSploit/Bedwars/Executed"))()
 loadstring(game:HttpGet("https://paste.vg/raw/0jghfxjdxf",true))() --stav implementation
